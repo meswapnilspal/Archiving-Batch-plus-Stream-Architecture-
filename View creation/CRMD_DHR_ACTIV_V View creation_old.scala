@@ -1,1 +1,118 @@
-{"version":"NotebookV1","origId":2937788264270965,"name":"CRMD_DHR_ACTIV_V View creation_old","language":"scala","commands":[{"version":"CommandV1","origId":2937788264270966,"guid":"2c9aad2d-7f97-4162-a8b1-c587120af2f2","subtype":"command","commandType":"auto","position":1.0,"command":"%md\nDatabricks :                   \nTable - cdspocchange.crm_CRMD_DHR_ACTIV     \nView - cdspocchange.CRMD_DHR_ACTIV_V\n\nSQL :    \nTable - SAPCRM.crm_CRMD_DHR_ACTIV     \nView - dbo.CRMD_DHR_ACTIV_V","commandVersion":58,"state":"input","results":null,"resultDbfsStatus":"INLINED_IN_TREE","resultDbfsErrorMessage":null,"errorSummary":null,"errorTraceType":null,"error":null,"workflows":[],"startTime":0,"submitTime":0,"finishTime":0,"collapsed":false,"bindings":{},"inputWidgets":{},"displayType":"table","width":"auto","height":"auto","xColumns":null,"yColumns":null,"pivotColumns":null,"pivotAggregation":null,"useConsistentColors":false,"customPlotOptions":{},"commentThread":[],"commentsVisible":false,"parentHierarchy":[],"diffInserts":[],"diffDeletes":[],"globalVars":{},"latestUser":"a user","latestUserId":null,"commandTitle":"","showCommandTitle":false,"hideCommandCode":false,"hideCommandResult":false,"isLockedInExamMode":false,"iPythonMetadata":null,"metadata":{},"streamStates":{},"datasetPreviewNameToCmdIdMap":{},"tableResultIndex":null,"listResultMetadata":null,"subcommandOptions":null,"contentSha256Hex":null,"nuid":"8219fbaa-a751-460c-9224-385c56c58744"},{"version":"CommandV1","origId":2937788264270967,"guid":"954b543a-df9e-4d26-819b-309831c15a21","subtype":"command","commandType":"auto","position":2.0,"command":"%sql\nCREATE VIEW cdspocchange.CRMD_DHR_ACTIV_V AS SELECT\n\t CLIENT                       CLIENT,\n\t GUID                         OBJECT_GUID,\n\t CHANGED_AT                   CHANGED_ON,\n\t OBJECT_ID                    ID_1,\n\t PRIVATE_FLAG                 PRIVATE,\n\t CATEGORY                     CATEGORY,\n\t PERSON_RESP                  EMPLOYEE_RESP,\n\t PRIORITY                     PRIORITY,\n\t DESCRIPTION_UC               DESCRIPTION,\n\t ACTIVITY_PARTNER             ACTIVITYPARTNER,\n\t PROCESS_TYPE                 TRANSACTION_TYPE,\n\t CONTACT_PERSON               CONTACT_PERS,\n\t DIRECTION                    DIRECTION,\n\t FROMDATE                     START_DATE,\n\t TODATE                       END_DATE,\n\t STAT_OPEN                    STAT_OPEN   ,                     \n\t SALES_ORG_RESP               ORG_UNIT_SALES,\n\t STATUS                       STATUS,\n\t USER_STAT_PROC               STATUS_PROFILE,\n\t ACT_TOT_DURA                 DURATION_VALUE,\n\t ACT_TOT_UNIT                 TIME_UNIT,\n\t RESP_AT_PARTNER              RESP_AT_PARTNERS,\n\t CHANNEL_PARTNER              CHANNEL_PARTNER,\n\t CP_PROGRAM                   CH_PARTNER_PROGRAMM,\n\t CP_TYPE                      CHANNEL_PARTNER_TYPE,\n\t CP_STATUS                    CH_PARTNER_STATUS,\n\t PATH_ID                      TERR_HIER_ID,\n\t TERR_ID                      TERRITORY_ID,\n\t SALES_ORG                    SALES_ORG_ID,\n\t SALES_OFFICE                 SALES_OFFICE,\n\t SALES_GROUP                  SALES_GROUP,\n\t CODE_ACT_ST                  CODE,\n\t CODEGRP_ACT_ST               CODE_GROUP,\n\t KATART_ACT_ST                CATALOG,\n\t CATLVLGUID01_IR              CAT_01_S1,\n\t CATLVLGUID02_IR              CAT_02_S1,\n\t CATLVLGUID03_IR              CAT_03_S1,\n\t CATLVLGUID04_IR              CAT_04_S1,\n\t CATLVLGUID05_IR              CAT_05_S1,\n\t CATLVLGUID06_IR              CAT_06_S1,\n\t CATLVLGUID07_IR              CAT_07_S1,\n\t CATLVLGUID08_IR              CAT_08_S1,\n\t CATLVLGUID09_IR              CAT_09_S1,\n\t CATLVLGUID10_IR              CAT_10_S1,\n\t EEW_R_ACT_DUMMY               DUMMY \nFROM cdspocchange.crm_CRMD_DHR_ACTIV","commandVersion":12,"state":"finished","results":{"type":"table","data":[],"arguments":{},"addedWidgets":{},"removedWidgets":[],"schema":[],"overflow":false,"aggData":[],"aggSchema":[],"aggOverflow":false,"aggSeriesLimitReached":false,"aggError":"","aggType":"","plotOptions":null,"isJsonSchema":true,"dbfsResultPath":null,"datasetInfos":[],"columnCustomDisplayInfos":{},"metadata":{}},"resultDbfsStatus":"INLINED_IN_TREE","resultDbfsErrorMessage":null,"errorSummary":null,"errorTraceType":null,"error":null,"workflows":[],"startTime":1643782636643,"submitTime":1643782636505,"finishTime":1643782637195,"collapsed":false,"bindings":{},"inputWidgets":{},"displayType":"table","width":"auto","height":"auto","xColumns":null,"yColumns":null,"pivotColumns":null,"pivotAggregation":null,"useConsistentColors":false,"customPlotOptions":{},"commentThread":[],"commentsVisible":false,"parentHierarchy":[],"diffInserts":[],"diffDeletes":[],"globalVars":{},"latestUser":"a user","latestUserId":null,"commandTitle":"","showCommandTitle":false,"hideCommandCode":false,"hideCommandResult":false,"isLockedInExamMode":false,"iPythonMetadata":null,"metadata":{},"streamStates":{},"datasetPreviewNameToCmdIdMap":{},"tableResultIndex":null,"listResultMetadata":[["table",0]],"subcommandOptions":null,"contentSha256Hex":null,"nuid":"99e91917-b2ad-46cf-a145-8e673dd24865"},{"version":"CommandV1","origId":2937788264270968,"guid":"886a66ff-b138-47d6-9c4a-dc2fa9eee95c","subtype":"command","commandType":"auto","position":2.5,"command":"%sql\nselect count(*) from cdspocchange.crm_CRMD_DHR_ACTIV\nunion all\nselect count(*) from cdspocchange.CRMD_DHR_ACTIV_V","commandVersion":22,"state":"finished","results":{"type":"table","data":[[457841],[457841]],"arguments":{},"addedWidgets":{},"removedWidgets":[],"schema":[{"name":"count(1)","type":"\"long\"","metadata":"{}"}],"overflow":false,"aggData":[],"aggSchema":[],"aggOverflow":false,"aggSeriesLimitReached":false,"aggError":"","aggType":"","plotOptions":null,"isJsonSchema":true,"dbfsResultPath":null,"datasetInfos":[],"columnCustomDisplayInfos":{},"metadata":{}},"resultDbfsStatus":"INLINED_IN_TREE","resultDbfsErrorMessage":null,"errorSummary":null,"errorTraceType":null,"error":null,"workflows":[],"startTime":1643782823765,"submitTime":1643782823721,"finishTime":1643782824513,"collapsed":false,"bindings":{},"inputWidgets":{},"displayType":"table","width":"7930","height":"auto","xColumns":null,"yColumns":null,"pivotColumns":null,"pivotAggregation":null,"useConsistentColors":false,"customPlotOptions":{},"commentThread":[],"commentsVisible":false,"parentHierarchy":[],"diffInserts":[],"diffDeletes":[],"globalVars":{},"latestUser":"a user","latestUserId":null,"commandTitle":"","showCommandTitle":false,"hideCommandCode":false,"hideCommandResult":false,"isLockedInExamMode":false,"iPythonMetadata":null,"metadata":{},"streamStates":{},"datasetPreviewNameToCmdIdMap":{},"tableResultIndex":null,"listResultMetadata":[["table",2]],"subcommandOptions":null,"contentSha256Hex":null,"nuid":"53a86e5d-5589-433f-9749-b81800c84bbe"},{"version":"CommandV1","origId":2937788264270969,"guid":"5de68507-1370-43ba-804f-0a16843e2e9d","subtype":"command","commandType":"auto","position":3.0,"command":"%sql\nCREATE VIEW CRMD_DHR_ACTIV_V AS SELECT\n\t CLIENT                       CLIENT,\n\t GUID                         OBJECT_GUID,\n\t CHANGED_AT                   CHANGED_ON,\n\t OBJECT_ID                    ID_1,\n\t PRIVATE_FLAG                 PRIVATE,\n\t CATEGORY                     CATEGORY,\n\t PERSON_RESP                  EMPLOYEE_RESP,\n\t PRIORITY                     PRIORITY,\n\t DESCRIPTION_UC               DESCRIPTION,\n\t ACTIVITY_PARTNER             ACTIVITYPARTNER,\n\t PROCESS_TYPE                 TRANSACTION_TYPE,\n\t CONTACT_PERSON               CONTACT_PERS,\n\t DIRECTION                    DIRECTION,\n\t FROMDATE                     START_DATE,\n\t TODATE                       END_DATE,\n\t STAT_OPEN                    STAT_OPEN,                     \n\t SALES_ORG_RESP               ORG_UNIT_SALES,\n\t STATUS                       STATUS,\n\t USER_STAT_PROC               STATUS_PROFILE,\n\t ACT_TOT_DURA                 DURATION_VALUE,\n\t ACT_TOT_UNIT                 TIME_UNIT,\n\t RESP_AT_PARTNER              RESP_AT_PARTNERS,\n\t CHANNEL_PARTNER              CHANNEL_PARTNER,\n\t CP_PROGRAM                   CH_PARTNER_PROGRAMM,\n\t CP_TYPE                      CHANNEL_PARTNER_TYPE,\n\t CP_STATUS                    CH_PARTNER_STATUS,\n\t PATH_ID                      TERR_HIER_ID,\n\t TERR_ID                      TERRITORY_ID,\n\t SALES_ORG                    SALES_ORG_ID,\n\t SALES_OFFICE                 SALES_OFFICE,\n\t SALES_GROUP                  SALES_GROUP,\n\t CODE_ACT_ST                  CODE,\n\t CODEGRP_ACT_ST               CODE_GROUP,\n\t KATART_ACT_ST                CATALOG,\n\t CATLVLGUID01_IR              CAT_01_S1,\n\t CATLVLGUID02_IR              CAT_02_S1,\n\t CATLVLGUID03_IR              CAT_03_S1,\n\t CATLVLGUID04_IR              CAT_04_S1,\n\t CATLVLGUID05_IR              CAT_05_S1,\n\t CATLVLGUID06_IR              CAT_06_S1,\n\t CATLVLGUID07_IR              CAT_07_S1,\n\t CATLVLGUID08_IR              CAT_08_S1,\n\t CATLVLGUID09_IR              CAT_09_S1,\n\t CATLVLGUID10_IR              CAT_10_S1,\n\t EEW_R_ACT_DUMMY               DUMMY \nFROM  SAPCRM.crm_CRMD_DHR_ACTIV","commandVersion":13,"state":"finished","results":null,"resultDbfsStatus":"INLINED_IN_TREE","resultDbfsErrorMessage":null,"errorSummary":null,"errorTraceType":null,"error":null,"workflows":[],"startTime":0,"submitTime":0,"finishTime":0,"collapsed":false,"bindings":{},"inputWidgets":{},"displayType":"table","width":"auto","height":"auto","xColumns":null,"yColumns":null,"pivotColumns":null,"pivotAggregation":null,"useConsistentColors":false,"customPlotOptions":{},"commentThread":[],"commentsVisible":false,"parentHierarchy":[],"diffInserts":[],"diffDeletes":[],"globalVars":{},"latestUser":"a user","latestUserId":null,"commandTitle":"","showCommandTitle":false,"hideCommandCode":false,"hideCommandResult":false,"isLockedInExamMode":false,"iPythonMetadata":null,"metadata":{},"streamStates":{},"datasetPreviewNameToCmdIdMap":{},"tableResultIndex":null,"listResultMetadata":null,"subcommandOptions":null,"contentSha256Hex":null,"nuid":"2f2f9538-2ae7-4ac8-b0cf-31a0b04649ef"}],"dashboards":[],"guid":"7c355a36-81ce-44fa-b8e0-93ade5d139a7","globalVars":{},"iPythonMetadata":null,"inputWidgets":{},"notebookMetadata":{"pythonIndentUnit":2},"reposExportFormat":"SOURCE"}
+// Databricks notebook source
+// MAGIC %md
+// MAGIC Databricks :                   
+// MAGIC Table - cdspocchange.crm_CRMD_DHR_ACTIV     
+// MAGIC View - cdspocchange.CRMD_DHR_ACTIV_V
+// MAGIC
+// MAGIC SQL :    
+// MAGIC Table - SAPCRM.crm_CRMD_DHR_ACTIV     
+// MAGIC View - dbo.CRMD_DHR_ACTIV_V
+
+// COMMAND ----------
+
+// MAGIC %sql
+// MAGIC CREATE VIEW cdspocchange.CRMD_DHR_ACTIV_V AS SELECT
+// MAGIC 	 CLIENT                       CLIENT,
+// MAGIC 	 GUID                         OBJECT_GUID,
+// MAGIC 	 CHANGED_AT                   CHANGED_ON,
+// MAGIC 	 OBJECT_ID                    ID_1,
+// MAGIC 	 PRIVATE_FLAG                 PRIVATE,
+// MAGIC 	 CATEGORY                     CATEGORY,
+// MAGIC 	 PERSON_RESP                  EMPLOYEE_RESP,
+// MAGIC 	 PRIORITY                     PRIORITY,
+// MAGIC 	 DESCRIPTION_UC               DESCRIPTION,
+// MAGIC 	 ACTIVITY_PARTNER             ACTIVITYPARTNER,
+// MAGIC 	 PROCESS_TYPE                 TRANSACTION_TYPE,
+// MAGIC 	 CONTACT_PERSON               CONTACT_PERS,
+// MAGIC 	 DIRECTION                    DIRECTION,
+// MAGIC 	 FROMDATE                     START_DATE,
+// MAGIC 	 TODATE                       END_DATE,
+// MAGIC 	 STAT_OPEN                    STAT_OPEN   ,                     
+// MAGIC 	 SALES_ORG_RESP               ORG_UNIT_SALES,
+// MAGIC 	 STATUS                       STATUS,
+// MAGIC 	 USER_STAT_PROC               STATUS_PROFILE,
+// MAGIC 	 ACT_TOT_DURA                 DURATION_VALUE,
+// MAGIC 	 ACT_TOT_UNIT                 TIME_UNIT,
+// MAGIC 	 RESP_AT_PARTNER              RESP_AT_PARTNERS,
+// MAGIC 	 CHANNEL_PARTNER              CHANNEL_PARTNER,
+// MAGIC 	 CP_PROGRAM                   CH_PARTNER_PROGRAMM,
+// MAGIC 	 CP_TYPE                      CHANNEL_PARTNER_TYPE,
+// MAGIC 	 CP_STATUS                    CH_PARTNER_STATUS,
+// MAGIC 	 PATH_ID                      TERR_HIER_ID,
+// MAGIC 	 TERR_ID                      TERRITORY_ID,
+// MAGIC 	 SALES_ORG                    SALES_ORG_ID,
+// MAGIC 	 SALES_OFFICE                 SALES_OFFICE,
+// MAGIC 	 SALES_GROUP                  SALES_GROUP,
+// MAGIC 	 CODE_ACT_ST                  CODE,
+// MAGIC 	 CODEGRP_ACT_ST               CODE_GROUP,
+// MAGIC 	 KATART_ACT_ST                CATALOG,
+// MAGIC 	 CATLVLGUID01_IR              CAT_01_S1,
+// MAGIC 	 CATLVLGUID02_IR              CAT_02_S1,
+// MAGIC 	 CATLVLGUID03_IR              CAT_03_S1,
+// MAGIC 	 CATLVLGUID04_IR              CAT_04_S1,
+// MAGIC 	 CATLVLGUID05_IR              CAT_05_S1,
+// MAGIC 	 CATLVLGUID06_IR              CAT_06_S1,
+// MAGIC 	 CATLVLGUID07_IR              CAT_07_S1,
+// MAGIC 	 CATLVLGUID08_IR              CAT_08_S1,
+// MAGIC 	 CATLVLGUID09_IR              CAT_09_S1,
+// MAGIC 	 CATLVLGUID10_IR              CAT_10_S1,
+// MAGIC 	 EEW_R_ACT_DUMMY               DUMMY 
+// MAGIC FROM cdspocchange.crm_CRMD_DHR_ACTIV
+
+// COMMAND ----------
+
+// MAGIC %sql
+// MAGIC select count(*) from cdspocchange.crm_CRMD_DHR_ACTIV
+// MAGIC union all
+// MAGIC select count(*) from cdspocchange.CRMD_DHR_ACTIV_V
+
+// COMMAND ----------
+
+// MAGIC %sql
+// MAGIC CREATE VIEW CRMD_DHR_ACTIV_V AS SELECT
+// MAGIC 	 CLIENT                       CLIENT,
+// MAGIC 	 GUID                         OBJECT_GUID,
+// MAGIC 	 CHANGED_AT                   CHANGED_ON,
+// MAGIC 	 OBJECT_ID                    ID_1,
+// MAGIC 	 PRIVATE_FLAG                 PRIVATE,
+// MAGIC 	 CATEGORY                     CATEGORY,
+// MAGIC 	 PERSON_RESP                  EMPLOYEE_RESP,
+// MAGIC 	 PRIORITY                     PRIORITY,
+// MAGIC 	 DESCRIPTION_UC               DESCRIPTION,
+// MAGIC 	 ACTIVITY_PARTNER             ACTIVITYPARTNER,
+// MAGIC 	 PROCESS_TYPE                 TRANSACTION_TYPE,
+// MAGIC 	 CONTACT_PERSON               CONTACT_PERS,
+// MAGIC 	 DIRECTION                    DIRECTION,
+// MAGIC 	 FROMDATE                     START_DATE,
+// MAGIC 	 TODATE                       END_DATE,
+// MAGIC 	 STAT_OPEN                    STAT_OPEN,                     
+// MAGIC 	 SALES_ORG_RESP               ORG_UNIT_SALES,
+// MAGIC 	 STATUS                       STATUS,
+// MAGIC 	 USER_STAT_PROC               STATUS_PROFILE,
+// MAGIC 	 ACT_TOT_DURA                 DURATION_VALUE,
+// MAGIC 	 ACT_TOT_UNIT                 TIME_UNIT,
+// MAGIC 	 RESP_AT_PARTNER              RESP_AT_PARTNERS,
+// MAGIC 	 CHANNEL_PARTNER              CHANNEL_PARTNER,
+// MAGIC 	 CP_PROGRAM                   CH_PARTNER_PROGRAMM,
+// MAGIC 	 CP_TYPE                      CHANNEL_PARTNER_TYPE,
+// MAGIC 	 CP_STATUS                    CH_PARTNER_STATUS,
+// MAGIC 	 PATH_ID                      TERR_HIER_ID,
+// MAGIC 	 TERR_ID                      TERRITORY_ID,
+// MAGIC 	 SALES_ORG                    SALES_ORG_ID,
+// MAGIC 	 SALES_OFFICE                 SALES_OFFICE,
+// MAGIC 	 SALES_GROUP                  SALES_GROUP,
+// MAGIC 	 CODE_ACT_ST                  CODE,
+// MAGIC 	 CODEGRP_ACT_ST               CODE_GROUP,
+// MAGIC 	 KATART_ACT_ST                CATALOG,
+// MAGIC 	 CATLVLGUID01_IR              CAT_01_S1,
+// MAGIC 	 CATLVLGUID02_IR              CAT_02_S1,
+// MAGIC 	 CATLVLGUID03_IR              CAT_03_S1,
+// MAGIC 	 CATLVLGUID04_IR              CAT_04_S1,
+// MAGIC 	 CATLVLGUID05_IR              CAT_05_S1,
+// MAGIC 	 CATLVLGUID06_IR              CAT_06_S1,
+// MAGIC 	 CATLVLGUID07_IR              CAT_07_S1,
+// MAGIC 	 CATLVLGUID08_IR              CAT_08_S1,
+// MAGIC 	 CATLVLGUID09_IR              CAT_09_S1,
+// MAGIC 	 CATLVLGUID10_IR              CAT_10_S1,
+// MAGIC 	 EEW_R_ACT_DUMMY               DUMMY 
+// MAGIC FROM  SAPCRM.crm_CRMD_DHR_ACTIV
